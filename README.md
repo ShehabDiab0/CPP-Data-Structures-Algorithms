@@ -1,4 +1,4 @@
-# C-Data-Structures
+# CPP-Data-Structures-Algorithms
 
 <h2> this repo will contain basic sorting algorithms and data structures and will be written in c++</h2>
 <hr>
