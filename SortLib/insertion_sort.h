@@ -5,9 +5,13 @@ void insertionSort(std::vector<ElemType>& data, Comparator compare)
 {
 	for (int i = 1; i < data.size(); i++)
 	{
-		for (int j = i; j > 0 && compare(data[j], data[j - 1]); j--)
+		ElemType element = data[i];
+		int j = i;
+		while (j > 0 && compare(element, data[j - 1]))
 		{
-			std::swap(data[j], data[j - 1]);
+			data[j] = data[j - 1];
+			j--;
 		}
+		data[j] = element;
 	}
 }
