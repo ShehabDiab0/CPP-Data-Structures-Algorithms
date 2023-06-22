@@ -8,10 +8,15 @@ void shellSort(std::vector<ElemType>& data, Comparator compare)
 	{
 		for (int i = gap; i < data.size(); i++)
 		{
-			for (int j = i; j >= gap && compare(data[j], data[j - gap]); j -= gap)
+			ElemType element = data[i];
+			int j = i;
+			while (j >= gap && compare(element, data[j - gap]))
 			{
-				std::swap(data[j], data[j - gap]);
+				data[j] = data[j - gap];
+				j -= gap;
 			}
+
+			data[j] = element;
 		}
 	}
 }
