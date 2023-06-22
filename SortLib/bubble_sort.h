@@ -8,9 +8,9 @@ void bubbleSort(std::vector<ElemType>& data, Comparator compare)
 		bool isSwapped = false;
 		for (int j = 0; j < data.size() - i - 1; j++)
 		{
-			if (compare(data[j], data[j + 1]))
+			if (compare(data[j + 1], data[j]))
 			{
-				std::swap(data[j], data[j + 1]);
+				std::swap(data[j + 1], data[j]);
 				isSwapped = true;
 			}
 		}
