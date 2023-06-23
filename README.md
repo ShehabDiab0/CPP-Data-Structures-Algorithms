@@ -41,7 +41,6 @@
 <ol>
   <li>Quick Sort</li>
   <li>Intro Sort</li>
-  <li>Graph</li>
   <li>Any List (custom list which allows all Data types in the same container)</li>
 </ol>
 <hr>
