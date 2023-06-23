@@ -19,6 +19,9 @@ void mergeSort(std::vector<ElemType>& data, Comparator compare = std::less<ElemT
 template<typename ElemType, typename Comparator = std::less<ElemType>>
 void mergeSortRange(std::vector<ElemType>& data, int startIndex, int endIndex, Comparator compare = std::less<ElemType>());
 
+template<typename ElemType, typename Comparator = std::greater<ElemType>>
+void heapSort(std::vector<ElemType>& data, Comparator compare = std::greater<ElemType>());
+
 void countSort(std::vector<int>& data); // works only with numbers
 
 // these are coming soon
@@ -33,14 +36,11 @@ template<typename ElemType, typename Comparator = std::less<ElemType>>
 void threeWayQuickSort(std::vector<ElemType>& data, Comparator compare = std::less<ElemType>());
 
 template<typename ElemType, typename Comparator = std::less<ElemType>>
-void heapSort(std::vector<ElemType>& data, Comparator compare = std::less<ElemType>());
-
-template<typename ElemType, typename Comparator = std::less<ElemType>>
 void introSort(std::vector<ElemType>& data, Comparator compare = std::less<ElemType>());
 */
 
 
-// util functions for mergeSort
+// util functions
 namespace Details
 {
 	template<typename ElemType, typename Comparator = std::less<ElemType>>
@@ -48,6 +48,12 @@ namespace Details
 
 	template<typename ElemType, typename Comparator = std::less<ElemType>>
 	void mergeDriver(std::vector<ElemType>& data, int low, int high, Comparator compare = std::less<ElemType>());
+
+	template<typename ElemType, typename Comparator = std::greater<ElemType>>
+	void heapifyDownwards(std::vector<ElemType>& heap, int parentIndex, int maxHeapSize, Comparator compare = std::greater<ElemType>());
+
+	template<typename ElemType, typename Comparator = std::greater<ElemType>>
+	void buildHeap(std::vector<ElemType>& heap, Comparator compare = std::greater<ElemType>());
 }
 
 #include "bubble_sort.h"
@@ -56,3 +62,4 @@ namespace Details
 #include "merge_sort.h"
 #include "selection_sort.h"
 #include "shell_sort.h"
+#include "heap_sort.h"
