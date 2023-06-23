@@ -21,6 +21,7 @@
   <li>Bubble Sort</li>
   <li>Shell Sort</li>
   <li>Merge Sort</li>
+  <li>Heap Sort</li>
   <li>Count Sort</li>
 </ol>
 <hr>
@@ -39,7 +40,6 @@
 <hr>
 <ol>
   <li>Quick Sort</li>
-  <li>Heap Sort</li>
   <li>Intro Sort</li>
   <li>Graph</li>
   <li>Any List (custom list which allows all Data types in the same container)</li>
